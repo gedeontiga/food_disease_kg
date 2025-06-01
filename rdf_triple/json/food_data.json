@@ -1,0 +1,227 @@
+{
+  "cerelac": {
+    "ingredients": "Wheat flour, milk powder, sugar, vegetable oil, vitamins, minerals",
+    "recipe": "Boil 150ml water and cool to lukewarm. Mix 50g Cerelac powder with the water, stirring until smooth. Serve immediately as a porridge for infants.",
+    "calories": 420,
+    "foodLocationArea": "Global (commonly Africa, Asia)",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Anytime",
+    "relatedDiseases": []
+  },
+  "cookie": {
+    "ingredients": "Wheat flour, sugar, butter, egg, baking soda, vanilla extract",
+    "recipe": "Preheat oven to 180°C (350°F). Cream 100g butter and 100g sugar; add 1 egg and 1 tsp vanilla. Mix 150g flour and ½ tsp baking soda; combine with wet ingredients. Roll into balls, place on a baking sheet, and bake for 10-12 minutes.",
+    "calories": 480,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Snack, Dessert",
+    "relatedDiseases": ["Cervical Cancer"]
+  },
+  "donut": {
+    "ingredients": "Wheat flour, yeast, sugar, milk, egg, butter, salt, oil for frying",
+    "recipe": "Mix 500g flour, 7g yeast, 50g sugar, 5g salt; add 1 egg, 200ml warm milk, 50g melted butter. Knead for 10 minutes, let rise for 1 hour. Roll out, cut into rings, let rise for 30 minutes. Fry in hot oil (170°C) for 1-2 minutes per side; glaze with sugar syrup.",
+    "calories": 400,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Snack, Dessert",
+    "relatedDiseases": ["Cervical Cancer"]
+  },
+  "eggah": {
+    "ingredients": "Eggs, parsley, onion, flour, salt, pepper, olive oil",
+    "recipe": "Beat 6 eggs with 2 tbsp flour, salt, and pepper. Finely chop 1 onion and a handful of parsley; mix into the eggs. Heat 2 tbsp olive oil in a pan, pour in the mixture, and cook on low for 10 minutes. Flip and cook for another 5 minutes until golden.",
+    "calories": 160,
+    "foodLocationArea": "Middle East, North Africa",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "fattah": {
+    "ingredients": "White bread, lamb, garlic, yogurt, rice, vinegar, ghee",
+    "recipe": "Cook 200g lamb with salt and pepper; shred and set aside broth. Toast 2 slices of white bread; break into pieces. Cook 100g rice; layer over bread. Mix 2 minced garlic cloves, 200g yogurt, 1 tbsp vinegar; pour over rice. Top with lamb and 1 tbsp ghee; drizzle with broth.",
+    "calories": 300,
+    "foodLocationArea": "Egypt, Middle East",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Dinner",
+    "relatedDiseases": []
+  },
+  "kanafeh": {
+    "ingredients": "Kanafeh dough (shredded phyllo), ricotta cheese, sugar syrup, butter, pistachios",
+    "recipe": "Preheat oven to 180°C (350°F). Mix 200g kanafeh dough with 100g melted butter; spread half in a pan. Add 200g ricotta cheese; cover with remaining dough. Bake for 30 minutes until golden. Pour 100ml sugar syrup over hot kanafeh; top with chopped pistachios.",
+    "calories": 400,
+    "foodLocationArea": "Middle East",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Dessert",
+    "relatedDiseases": ["Cervical Cancer"]
+  },
+  "kubba": {
+    "ingredients": "Bulgur, ground beef, onion, pine nuts, spices (allspice, cinnamon), salt",
+    "recipe": "Soak 200g bulgur for 30 minutes; mix with 200g ground beef, salt, and spices to form a dough. Sauté 1 onion, 100g ground beef, 2 tbsp pine nuts, allspice, and cinnamon for the filling. Shape bulgur mixture into balls, stuff with filling, and seal. Fry in hot oil for 5-7 minutes until golden.",
+    "calories": 250,
+    "foodLocationArea": "Middle East, Iraq",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "macaroni_bechamel": {
+    "ingredients": "Macaroni, ground beef, onion, tomato sauce, milk, flour, butter, cheese",
+    "recipe": "Cook 300g macaroni; set aside. Sauté 1 onion, 200g ground beef, and 200g tomato sauce with salt and pepper. Make bechamel: melt 50g butter, add 50g flour, whisk in 500ml milk, cook until thick. Layer macaroni, beef, bechamel in a dish; top with cheese. Bake at 180°C (350°F) for 30 minutes.",
+    "calories": 220,
+    "foodLocationArea": "Egypt, Middle East",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Dinner",
+    "relatedDiseases": []
+  },
+  "mahshi": {
+    "ingredients": "Zucchini, rice, ground meat, onion, parsley, tomato, spices (cumin, salt)",
+    "recipe": "Hollow out 4 zucchinis. Mix 100g rice, 100g ground meat, 1 chopped onion, parsley, 1 tomato, cumin, salt. Stuff zucchinis with the mixture. Simmer in a pot with tomato sauce and water for 45 minutes.",
+    "calories": 150,
+    "foodLocationArea": "Middle East, North Africa",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "maize_cob_immature": {
+    "ingredients": "Young maize cobs, water, salt, butter (optional)",
+    "recipe": "Boil young maize cobs in salted water for 15 minutes. Drain and serve with a pat of butter.",
+    "calories": 90,
+    "foodLocationArea": "Global (commonly Africa, Americas)",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Snack",
+    "relatedDiseases": []
+  },
+  "maize_cracked_cooked": {
+    "ingredients": "Cracked maize, water, salt",
+    "recipe": "Boil 200g cracked maize in 600ml salted water. Simmer for 30 minutes until tender.",
+    "calories": 100,
+    "foodLocationArea": "Africa, Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "maize_dried_raw": {
+    "ingredients": "Dried maize kernels",
+    "recipe": "Soak 200g dried maize overnight. Boil for 1 hour until soft.",
+    "calories": 365,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Raw (before cooking)",
+    "eatingTime": "N/A (ingredient)",
+    "relatedDiseases": []
+  },
+  "maize_flour_dry": {
+    "ingredients": "Ground dried maize",
+    "recipe": "Boil 800ml water with 1 tsp salt. Gradually whisk in 200g maize flour; cook on low for 20 minutes, stirring.",
+    "calories": 370,
+    "foodLocationArea": "Global (commonly Africa, Americas)",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "maize_green_cooked": {
+    "ingredients": "Green maize kernels, water, salt",
+    "recipe": "Boil 200g green maize kernels in salted water for 20 minutes. Drain and serve as a side.",
+    "calories": 95,
+    "foodLocationArea": "Global (commonly Africa, Americas)",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Snack",
+    "relatedDiseases": []
+  },
+  "maize_yellow_flour": {
+    "ingredients": "Ground yellow maize",
+    "recipe": "Preheat oven to 200°C (390°F). Mix 200g yellow maize flour, 1 tsp baking powder, 1 tsp salt, 1 egg, 200ml milk, 2 tbsp oil. Pour into a greased pan; bake for 20 minutes.",
+    "calories": 370,
+    "foodLocationArea": "Global (commonly Americas, Africa)",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "millet_bulrush": {
+    "ingredients": "Bulrush millet, water, salt",
+    "recipe": "Boil 600ml water with 1 tsp salt. Add 200g bulrush millet; simmer for 25 minutes.",
+    "calories": 378,
+    "foodLocationArea": "Africa, Asia",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "millet_finger_drain_flour": {
+    "ingredients": "Finger millet flour, water",
+    "recipe": "Boil 500ml water. Whisk in 100g finger millet flour; cook for 10 minutes, stirring.",
+    "calories": 335,
+    "foodLocationArea": "Africa, India",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast",
+    "relatedDiseases": []
+  },
+  "sayadiyah_fish": {
+    "ingredients": "Fish (e.g., cod), rice, onion, cumin, turmeric, garlic, olive oil",
+    "recipe": "Sauté 1 onion, 2 garlic cloves in 2 tbsp olive oil; add 1 tsp cumin, 1 tsp turmeric. Add 200g rice and 400ml water; cook for 15 minutes. Fry 200g fish fillets; serve over rice.",
+    "calories": 200,
+    "foodLocationArea": "Middle East",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "spaghetti_or_macaroni": {
+    "ingredients": "Spaghetti, water, salt, olive oil",
+    "recipe": "Boil 300g spaghetti in salted water for 10 minutes. Drain, toss with 1 tbsp olive oil.",
+    "calories": 130,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "alexandrian_kebdah": {
+    "ingredients": "Lamb liver, garlic, green peppers, lemon juice, cumin, salt, olive oil",
+    "recipe": "Slice 300g liver; marinate with 2 garlic cloves, 1 tsp cumin, salt, 2 tbsp lemon juice. Sauté 1 green pepper in 2 tbsp olive oil; add liver and cook for 5 minutes per side.",
+    "calories": 175,
+    "foodLocationArea": "Egypt",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "baked_sweet_potato": {
+    "ingredients": "Sweet potato, olive oil, salt",
+    "recipe": "Preheat oven to 200°C (390°F). Rub 1 sweet potato with olive oil and salt; bake for 45 minutes.",
+    "calories": 90,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Lunch, Snack",
+    "relatedDiseases": []
+  },
+  "besarah": {
+    "ingredients": "Fava beans, garlic, parsley, cumin, olive oil, lemon juice",
+    "recipe": "Boil 200g fava beans until soft; blend with 2 garlic cloves, a handful of parsley, 1 tsp cumin, 2 tbsp lemon juice. Drizzle with 1 tbsp olive oil; serve with bread.",
+    "calories": 110,
+    "foodLocationArea": "Egypt",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch",
+    "relatedDiseases": []
+  },
+  "breadwhite": {
+    "ingredients": "Wheat flour, water, yeast, salt, sugar, vegetable oil",
+    "recipe": "Mix 500g wheat flour, 7g yeast, 10g salt, 10g sugar in a bowl. Add 300ml warm water and 2 tbsp vegetable oil; knead into a dough for 10 minutes. Let dough rise for 1 hour until doubled. Shape into a loaf, place in a greased pan, and let rise for 30 minutes. Bake at 200°C (390°F) for 30 minutes until golden.",
+    "calories": 265,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Lunch, Dinner",
+    "relatedDiseases": []
+  },
+  "cake": {
+    "ingredients": "Wheat flour, sugar, eggs, butter, baking powder, vanilla extract, milk",
+    "recipe": "Preheat oven to 180°C (350°F). Cream 200g butter and 200g sugar until light. Beat in 3 eggs and 1 tsp vanilla extract. Sift 200g flour and 2 tsp baking powder; fold into the mixture with 50ml milk. Pour into a greased 8-inch pan; bake for 25-30 minutes.",
+    "calories": 350,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Dessert",
+    "relatedDiseases": ["Cervical Cancer"]
+  },
+  "breadroll": {
+    "ingredients": "Wheat flour, water, yeast, salt, sugar, butter",
+    "recipe": "Mix 500g flour, 7g yeast, 10g salt, 10g sugar; add 300ml warm water, 2 tbsp butter. Knead for 10 minutes, let rise for 1 hour. Shape into rolls, let rise for 30 minutes. Bake at 200°C (390°F) for 15 minutes.",
+    "calories": 280,
+    "foodLocationArea": "Global",
+    "isRawOrCooked": "Cooked",
+    "eatingTime": "Breakfast, Snack",
+    "relatedDiseases": []
+  }
+}

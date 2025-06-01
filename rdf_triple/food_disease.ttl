@@ -1,0 +1,174 @@
+@prefix : <http://www.semanticweb.org/gedeon/ontologies/2025/4/foods-diseases/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/gedeon/ontologies/2025/4/foods-diseases/> .
+
+<http://www.semanticweb.org/gedeon/ontologies/2025/4/foods-diseases> rdf:type owl:Ontology ;
+    rdfs:label "Food-Disease Knowledge Ontology" ;
+    rdfs:comment "Ontology for representing relationships between foods and diseases" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:belongTo rdf:type owl:ObjectProperty ;
+          rdfs:label "belongs to" ;
+          rdfs:comment "Relates a disease to its disease family" ;
+          rdfs:domain :Disease ;
+          rdfs:range :DiseaseFamily .
+
+:isDocumentedBy rdf:type owl:ObjectProperty ;
+                rdfs:label "is documented by" ;
+                rdfs:comment "Relates a disease to its documentation" ;
+                rdfs:domain :Disease ;
+                rdfs:range :DiseaseDocument .
+
+:hasTreatmentProtocol rdf:type owl:ObjectProperty ;
+                      rdfs:label "has treatment protocol" ;
+                      rdfs:comment "Relates a disease to its treatment protocol" ;
+                      rdfs:domain :Disease ;
+                      rdfs:range :TreatmentProtocol .
+
+:isRelatedTo rdf:type owl:ObjectProperty ;
+             rdfs:label "is related to" ;
+             rdfs:comment "Relates a food to a disease it may influence" ;
+             rdfs:domain :Food ;
+             rdfs:range :Disease .
+
+:isImageOf rdf:type owl:ObjectProperty ;
+           rdfs:label "is image of" ;
+           rdfs:comment "Relates a food image to the food it represents" ;
+           rdfs:domain :FoodImage ;
+           rdfs:range :Food .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+# Food Properties
+:foodName rdf:type owl:DatatypeProperty ;
+          rdfs:label "food name" ;
+          rdfs:comment "The name of the food" ;
+          rdfs:domain :Food ;
+          rdfs:range xsd:string .
+
+:calorieIntake rdf:type owl:DatatypeProperty ;
+               rdfs:label "calorie intake" ;
+               rdfs:comment "Caloric content of the food per serving" ;
+               rdfs:domain :Food ;
+               rdfs:range xsd:integer .
+
+:eatingTime rdf:type owl:DatatypeProperty ;
+            rdfs:label "eating time" ;
+            rdfs:comment "Recommended time to consume the food" ;
+            rdfs:domain :Food ;
+            rdfs:range xsd:string .
+
+:foodLocationArea rdf:type owl:DatatypeProperty ;
+                  rdfs:label "food location area" ;
+                  rdfs:comment "Geographic area where the food is commonly found" ;
+                  rdfs:domain :Food ;
+                  rdfs:range xsd:string .
+
+:ingredients rdf:type owl:DatatypeProperty ;
+             rdfs:label "ingredients" ;
+             rdfs:comment "List of ingredients in the food" ;
+             rdfs:domain :Food ;
+             rdfs:range xsd:string .
+
+:recipe rdf:type owl:DatatypeProperty ;
+        rdfs:label "recipe" ;
+        rdfs:comment "Recipe or preparation method for the food" ;
+        rdfs:domain :Food ;
+        rdfs:range xsd:string .
+
+:isRawOrCooked rdf:type owl:DatatypeProperty ;
+               rdfs:label "is raw or cooked" ;
+               rdfs:comment "Indicates whether the food is typically consumed raw or cooked" ;
+               rdfs:domain :Food ;
+               rdfs:range xsd:string .
+
+# Food Image Properties
+:imageUrl rdf:type owl:DatatypeProperty ;
+          rdfs:label "image URL" ;
+          rdfs:comment "URL to access the food image" ;
+          rdfs:domain :FoodImage ;
+          rdfs:range xsd:string .
+
+:fileName rdf:type owl:DatatypeProperty ;
+          rdfs:label "file name" ;
+          rdfs:comment "Original filename of the image or document" ;
+          rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :FoodImage :DiseaseDocument :TreatmentProtocol ) ] ;
+          rdfs:range xsd:string .
+
+# Disease Properties
+:diseaseName rdf:type owl:DatatypeProperty ;
+             rdfs:label "disease name" ;
+             rdfs:comment "The name of the disease" ;
+             rdfs:domain :Disease ;
+             rdfs:range xsd:string .
+
+:symptoms rdf:type owl:DatatypeProperty ;
+          rdfs:label "symptoms" ;
+          rdfs:comment "Common symptoms of the disease" ;
+          rdfs:domain :Disease ;
+          rdfs:range xsd:string .
+
+:sex rdf:type owl:DatatypeProperty ;
+     rdfs:label "sex" ;
+     rdfs:comment "Gender most commonly affected by the disease" ;
+     rdfs:domain :Disease ;
+     rdfs:range xsd:string .
+
+:mostCommonSubjectKind rdf:type owl:DatatypeProperty ;
+                       rdfs:label "most common subject kind" ;
+                       rdfs:comment "Type of subject most commonly affected" ;
+                       rdfs:domain :Disease ;
+                       rdfs:range xsd:string .
+
+# Disease Family Properties
+:diseaseFamilyName rdf:type owl:DatatypeProperty ;
+                   rdfs:label "disease family name" ;
+                   rdfs:comment "Name of the disease family" ;
+                   rdfs:domain :DiseaseFamily ;
+                   rdfs:range xsd:string .
+
+# Document Properties
+:documentUrl rdf:type owl:DatatypeProperty ;
+             rdfs:label "document URL" ;
+             rdfs:comment "URL to access the document" ;
+             rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :DiseaseDocument :TreatmentProtocol ) ] ;
+             rdfs:range xsd:string .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Food rdf:type owl:Class ;
+      rdfs:label "Food" ;
+      rdfs:comment "A food item that can be consumed" .
+
+:FoodImage rdf:type owl:Class ;
+           rdfs:label "Food Image" ;
+           rdfs:comment "Visual representation of a food item" .
+
+:Disease rdf:type owl:Class ;
+         rdfs:label "Disease" ;
+         rdfs:comment "A medical condition or illness" .
+
+:DiseaseFamily rdf:type owl:Class ;
+               rdfs:label "Disease Family" ;
+               rdfs:comment "A group of related diseases" .
+
+:DiseaseDocument rdf:type owl:Class ;
+                 rdfs:label "Disease Document" ;
+                 rdfs:comment "Documentation about a disease" .
+
+:TreatmentProtocol rdf:type owl:Class ;
+                   rdfs:label "Treatment Protocol" ;
+                   rdfs:comment "Medical protocol for treating a disease" .

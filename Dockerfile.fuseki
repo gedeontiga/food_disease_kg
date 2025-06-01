@@ -1,0 +1,22 @@
+FROM eclipse-temurin:21-jre
+
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl
+
+# Download and extract Fuseki
+RUN curl -L https://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-5.4.0.tar.gz | tar -xz -C /opt/ && \
+    mv /opt/apache-jena-fuseki-* /opt/fuseki
+
+WORKDIR /opt/fuseki
+
+# Create directory for persistent data
+RUN mkdir -p /fuseki/databases/food_disease_kg
+
+# Copy configuration file
+COPY fuseki-config.ttl /opt/fuseki/
+
+# Expose port
+EXPOSE 3030
+
+# Start Fuseki with configuration file
+CMD ["./fuseki-server", "--port=3030", "--config=fuseki-config.ttl"]

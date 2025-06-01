@@ -1,0 +1,43 @@
+[
+  {
+    "diseaseName": "Breast Cancer",
+    "symptoms": ["breast lump", "nipple discharge", "skin changes", "breast pain"],
+    "sex": "Female",
+    "mostCommonSubjectKind": "Women over 40",
+    "diseaseFamilyName": "Cancer"
+  },
+  {
+    "diseaseName": "Cervical Cancer",
+    "symptoms": [
+      "pelvic pain",
+      "abnormal vaginal bleeding",
+      "systemic symptoms in advanced stages"
+    ],
+    "sex": "Female",
+    "mostCommonSubjectKind": "Women in sub-Saharan Africa",
+    "diseaseFamilyName": "Cancer"
+  },
+  {
+    "diseaseName": "Ovarian Leiomyoma",
+    "symptoms": [
+      "asymptomatic (incidental finding)",
+      "abdominal pain",
+      "menstrual disorders",
+      "fertility issues"
+    ],
+    "sex": "Female",
+    "mostCommonSubjectKind": "Pre- and postmenopausal women",
+    "diseaseFamilyName": "Benign Tumor"
+  },
+  {
+    "diseaseName": "Ovarian Cysts",
+    "symptoms": [
+      "asymptomatic (incidental ultrasound finding)",
+      "fetal distress due to torsion",
+      "ascites"
+    ],
+    "sex": "Female",
+    "mostCommonSubjectKind": "Female fetuses",
+    "diseaseFamilyName": "Benign Cyst"
+  }
+]

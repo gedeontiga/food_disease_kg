@@ -1,0 +1,59 @@
+services:
+  fuseki:
+    build:
+      context: .
+      dockerfile: Dockerfile.fuseki
+    ports:
+      - "3030:3030"
+    volumes:
+      - fuseki-data:/fuseki/databases
+      - ./rdf_triple:/fuseki/data:ro
+      - ./fuseki-config.ttl:/opt/fuseki/fuseki-config.ttl:ro
+    environment:
+      - ADMIN_PASSWORD=admin
+      - JVM_ARGS=-Xmx2g
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3030/$/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  solr:
+    image: solr:9.8.1
+    ports:
+      - "8983:8983"
+    volumes:
+      - solr-data:/var/solr
+    command: bash -c "solr-precreate food_collection & solr-precreate disease_collection"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8983/solr/admin/cores?action=STATUS"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  flask:
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+      - ./data/Foods:/app/assets/images
+      - ./data/Diseases:/app/assets/documents
+    depends_on:
+      fuseki:
+        condition: service_healthy
+      solr:
+        condition: service_healthy
+    environment:
+      - FLASK_ENV=development
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/foods"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  fuseki-data:
+  solr-data:
