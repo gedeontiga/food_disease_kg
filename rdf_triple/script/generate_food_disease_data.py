@@ -18,6 +18,9 @@ ex = Namespace(BASE)
 g = Graph()
 g.bind("ex", ex)
 
+# Base URL for resources (configurable via environment variable)
+BASE_URL = os.getenv("BASE_URL", "http://localhost:5000")
+
 # Load food and disease data
 try:
     with open(FOOD_DATA_FILE, 'r') as f:
@@ -95,8 +98,8 @@ try:
             g.add((image_uri, RDF.type, ex.FoodImage))
             g.add((image_uri, ex.isImageOf, food_uri))
             
-            # Add image URL
-            image_url = f"http://flask:5000/images/{category}/{filename}"
+            # Add image URL using BASE_URL
+            image_url = f"{BASE_URL}/images/{category}/{filename}"
             g.add((image_uri, ex.imageUrl, Literal(image_url, datatype=XSD.string)))
             
             # Add image filename for reference
@@ -156,7 +159,7 @@ try:
                     doc_uri = ex[f"doc_{normalize_name(disease_name)}_{doc_count}"]
                     g.add((doc_uri, RDF.type, ex.DiseaseDocument))
                     
-                    doc_url = f"http://flask:5000/documents/{disease_dir_name}/{filename}"
+                    doc_url = f"{BASE_URL}/documents/{disease_dir_name}/{filename}"
                     g.add((doc_uri, ex.documentUrl, Literal(doc_url, datatype=XSD.string)))
                     g.add((doc_uri, ex.fileName, Literal(filename, datatype=XSD.string)))
                     g.add((disease_uri, ex.isDocumentedBy, doc_uri))
@@ -171,7 +174,7 @@ try:
                         treatment_uri = ex[f"treatment_{normalize_name(disease_name)}_{treatment_count}"]
                         g.add((treatment_uri, RDF.type, ex.TreatmentProtocol))
                         
-                        treatment_url = f"http://flask:5000/documents/{disease_dir_name}/treatment_protocol/{filename}"
+                        treatment_url = f"{BASE_URL}/documents/{disease_dir_name}/treatment_protocol/{filename}"
                         g.add((treatment_uri, ex.documentUrl, Literal(treatment_url, datatype=XSD.string)))
                         g.add((treatment_uri, ex.fileName, Literal(filename, datatype=XSD.string)))
                         g.add((disease_uri, ex.hasTreatmentProtocol, treatment_uri))
@@ -191,7 +194,7 @@ try:
     total_triples = len(g)
     print(f"\nSuccessfully wrote {total_triples} triples to {OUTPUT}")
     print(f"Output file location: {os.path.abspath(OUTPUT)}")
-    print(f"Generated on: June 1, 2025")
+    print(f"Generated on: June 2, 2025")
 except Exception as e:
     print(f"Error writing output: {e}")
     sys.exit(1)

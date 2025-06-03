@@ -1,0 +1,66 @@
+AMBOMO TIGA GEDEON 21T2496
+1)
+PREFIX ex: <http://www.semanticweb.org/gedeon/ontologies/2025/4/foods-diseases/>
+SELECT ?food ?foodName WHERE {
+  ?food a ex:Food ;
+        ex:foodName ?foodName .
+  FILTER (CONTAINS(LCASE(?foodName), "cerelac"))
+} LIMIT 5
+
+2)
+SELECT ?food ?calories
+WHERE {
+  ?food a :Food ;
+        :calorieIntake ?calories .
+  FILTER(?calories > 280)
+}
+ORDER BY DESC(?calories)
+
+3)
+SELECT ?food ?location
+WHERE {
+  ?food a ex:Food ;
+        ex:foodLocationArea ?location .
+  FILTER(str(?location) = "Egypt")
+}
+
+4)
+SELECT ?food ?foodName ?imageUrl ?ingredients ?recipe ?calories ?eatingTime ?foodLocationArea ?isRawOrCooked ?disease ?diseaseName
+WHERE {
+    ?food a ex:Food ;
+          ex:foodName ?foodName .
+    OPTIONAL { 
+        ?imageObj ex:isImageOf ?food ;
+                 ex:imageUrl ?imageUrl .
+    }
+    OPTIONAL { ?food ex:ingredients ?ingredients . }
+    OPTIONAL { ?food ex:recipe ?recipe . }
+    OPTIONAL { ?food ex:calorieIntake ?calories . }
+    OPTIONAL { ?food ex:eatingTime ?eatingTime . }
+    OPTIONAL { ?food ex:foodLocationArea ?foodLocationArea . }
+    OPTIONAL { ?food ex:isRawOrCooked ?isRawOrCooked . }
+    OPTIONAL { 
+        ?food ex:isRelatedTo ?disease .
+        ?disease ex:diseaseName ?diseaseName . 
+    }
+}
+
+5)
+SELECT ?disease ?name ?symptoms ?sex ?subjectKind ?family ?familyName ?doc ?docUrl ?treatment ?treatmentUrl
+WHERE {
+    ?disease a ex:Disease ;
+             ex:diseaseName ?name ;
+             ex:symptoms ?symptoms ;
+             ex:sex ?sex ;
+             ex:mostCommonSubjectKind ?subjectKind ;
+             ex:belongTo ?family .
+    ?family ex:diseaseFamilyName ?familyName .
+    OPTIONAL { 
+        ?disease ex:isDocumentedBy ?doc . 
+        ?doc ex:documentUrl ?docUrl . 
+    }
+    OPTIONAL { 
+        ?disease ex:hasTreatmentProtocol ?treatment .
+        ?treatment ex:documentUrl ?treatmentUrl .
+    }
+}
